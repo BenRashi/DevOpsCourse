@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx-nexusproxy
+    ports:
+      - '443:443'
+      - '5000:5000'
+    links:
+      - nexus
+    command: [ nginx, '-g', 'daemon off;' ]
+    networks:
+     - nexus
+
+  nexus:
+    image: sonatype/nexus3
+    volumes:
+      - 'nexus3-data:/nexus-data'
+    networks:
+     - nexus
+
+
+  sonarqube:
+    image: sonarqube
+    restart: unless-stopped
+    ports:
+      - 0.0.0.0:9000:9000
+      - 0.0.0.0:9092:9092
+    networks:
+     - nexus
+
+volumes:
+  nexus3-data:
+
+networks:
+  nexus:
