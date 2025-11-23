@@ -142,7 +142,7 @@ Welcome to the **Docker Labs** repository!
 For questions or feedback, feel free to reach out:
 - **Email**: eyal@levys.co.il
 - **GitHub**: [https://github.com/elevy99927](https://github.com/elevy99927)
----
+----
 
 [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/BenRashi/DevOpsCourse) 
 ---
